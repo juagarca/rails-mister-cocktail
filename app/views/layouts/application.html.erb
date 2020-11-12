@@ -13,6 +13,10 @@
   </head>
 
   <body>
+    <div class="navbar-lewagon navbar-collapse">
+      <%= link_to 'All our cocktails', cocktails_path %>
+      <%= link_to 'Add a new cocktail', cocktails_new_path %>
+    </div>
     <div class="container">
       <%= yield %>
     </div>
