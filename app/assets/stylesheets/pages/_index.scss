@@ -1,2 +1,10 @@
-// Import page-specific CSS files here.
-@import "home";
+h1 {
+  color: $black;
+  padding-top: 16px;
+}
+
+a {
+    color: $gray;
+    text-decoration: none;
+    font-size: 15px;
+}

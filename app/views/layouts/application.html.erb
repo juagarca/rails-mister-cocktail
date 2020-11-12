@@ -14,8 +14,8 @@
 
   <body>
     <div class="navbar-lewagon">
-      <%= link_to 'List of cocktails', cocktails_path %>
-      <%= link_to 'Add a new cocktail', new_cocktail_path %>
+      <%= link_to 'Home', cocktails_path, class: "button" %>
+      <%= link_to 'Create a cocktail', new_cocktail_path, class: "button" %>
     </div>
     <div class="container">
       <%= yield %>

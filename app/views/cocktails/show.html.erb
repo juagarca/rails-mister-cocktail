@@ -1,10 +1,10 @@
 <h1>Cocktail <%= @cocktail.name %> </h1>
-
+<p>Ingredients and measurements:</p>
 <div class="ingredients">
   <ul>
     <% @cocktail.doses.each do |d| %>
       <li><%= d.description %> | <%= d.ingredient.name %> |
-        <%= link_to '🗑', dose_path(d.id),
+        <%= link_to 'ⓧ', dose_path(d.id),
               method: :delete,
               data: { confirm: "Are you sure?" } %>
       </li>
@@ -12,4 +12,4 @@
   </ul>
 </div>
 
-<%= link_to 'Create a new dose', new_cocktail_dose_path(@cocktail.id) %>
+<%= link_to 'Create a new dose', new_cocktail_dose_path(@cocktail.id), class: "button-white" %>

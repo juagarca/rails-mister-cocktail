@@ -1,0 +1,25 @@
+.button {
+  border: 1px solid $dark-gray;
+  border-radius: 14px;
+  background: $light-gray;
+  padding: 5px 10px;
+}
+
+.button-white {
+  border: 1px solid $dark-gray;
+  border-radius: 14px;
+  background: $white;
+  padding: 5px 10px;
+}
+
+.button:hover {
+  background: $dark-gray;
+  text-decoration:none;
+  color: $white;
+}
+
+.button-white:hover {
+  background: $dark-gray;
+  text-decoration:none;
+  color: $white;
+}
