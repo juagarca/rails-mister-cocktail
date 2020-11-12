@@ -2,7 +2,7 @@
 <div class="cards-container">
   <% @cocktails.each do |c| %>
   <div class="card">
-    <%= c.name %>
+    <%= link_to c.name, cocktail_path(c.id) %>
   </div>
   <% end %>
 </div>
