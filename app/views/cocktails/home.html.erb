@@ -1,8 +1,8 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('/assets/bar.jpg');">
   <div class="container">
-    <h1>London's finest online <strong>cocktail</strong> bar
-    <p>Where you don't need to be a mixologist to make good cocktails</p>
-    <%= link_to 'Make a cocktail', new_cocktail_path, class: "button-white" %>
+    <h1>London's finest online <strong>cocktail</strong> bar</h1>
+    <br>
+    <%= link_to 'Make a cocktail', new_cocktail_path, class: "button" %>
   </div>
 </div>
 <br>
@@ -10,9 +10,13 @@
 <h1>All cocktails (<%=  @cocktails.count %>)</h1> <br>
   <div class="cards-container">
     <% @cocktails.each do |c| %>
-    <div class="card">
-      <%= link_to c.name, cocktail_path(c.id) %>
-    </div>
+      <% if c.photo.attached? %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+        url('<%= cl_image_path c.photo.key, height: 300, width: 300, crop: :fill %>')"> <%= link_to c.name, cocktail_path(c.id) %> </div>
+        <% else %>
+         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+        url('"> <%= link_to c.name, cocktail_path(c.id) %> </div>
+      <% end %>
     <% end %>
   </div>
 </div>

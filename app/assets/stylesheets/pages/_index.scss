@@ -1,17 +1,24 @@
 h1 {
+ color: $dark-gray;
+}
+
+h2 {
   color: $dark-gray;
-  padding-top: 16px;
+  font-family: $body-font;
 }
 
 a {
-    color: $gray;
-    text-decoration: none;
-    font-size: 15px;
+  color: $dark-gray;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: $body-font;
+}
+
+a:hover {
+  color: $purple;
 }
 
 p {
   color: $dark-gray;
+  font-family: $body-font;
 }
-// .ingredients li {
-//   list-style-type: none;
-// }

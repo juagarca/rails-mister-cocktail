@@ -1,8 +1,9 @@
-.navbar-lewagon {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 8px;
-  background: $white;
-  height: 50px;
+.navbar {
+  justify-content: flex-end;
+  background-color: transparent;
+  transition: 0.5s background-color ease;
+}
+
+.navbar-white {
+  background-color: white;
 }

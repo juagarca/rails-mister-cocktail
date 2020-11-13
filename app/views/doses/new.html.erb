@@ -1,5 +1,7 @@
 <div class="container" style="width: 500px;">
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://picsum.photos/200/300);"><h1><%= @cocktail.name %></h1></div>
+  <% if @cocktail.photo.attached? %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @cocktail.photo.key, height: 300, width: 300, crop: :fill %>');"><h1><%= @cocktail.name %></h1></div>
+  <% end %>
   <br>
   <div class="container text-center" style="width: 350px;">
     <p>Add description and ingredient: </p>
@@ -7,7 +9,7 @@
     <%=simple_form_for [@cocktail, @dose] do |f| %>
       <%= f.input :description %>
       <%= f.association :ingredient %>
-      <%= f.submit "Add", class: "button-white"%>
+      <%= f.submit "Add", class: "button"%>
     <% end %>
   </div>
 </div>
