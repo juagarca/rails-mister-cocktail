@@ -2,12 +2,25 @@
   justify-content: flex-end;
   background-color: transparent;
   transition: 0.5s background-color ease;
-  // width: 100%;
-  // a {
-  //   color: $light-gray;
-  // }
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  a {
+    color: $dark-gray;
+    background: $light-gray;
+    font-weight: bolder;
+  } :hover {
+    color: $purple;
+  }
 }
 
 .navbar-white {
-  background-color: white;
+  background-color: $light-gray;
+
+  a {
+    color: $dark-gray;
+  } :hover {
+    color: $purple;
+  }
 }
