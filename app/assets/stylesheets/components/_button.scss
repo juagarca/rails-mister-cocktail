@@ -1,13 +1,12 @@
 .button {
-  border-radius: 14px;
+  border-radius: 20px;
   background: $purple;
-  padding: 5px 10px;
+  padding: 10px 15px;
   color : $white;
 }
 
 .button:hover {
-  background: $light-gray;
+  background: $white;
   text-decoration:none;
   color: $purple;
-  border: 1px solid $purple;
 }

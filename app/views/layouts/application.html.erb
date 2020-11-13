@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsMisterCocktail</title>
+    <title>Online 🍸 Bar</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -13,10 +13,20 @@
   </head>
 
   <body>
-  <div class="navbar">
-    <%= link_to "Home", root_path, class: "nav-link" %>
-    <%= link_to "Make a cocktail", new_cocktail_path, class: "nav-link" %>
-  </div>
+    <div class="navbar">
+      <%= link_to "Home", root_path, class: "nav-link" %>
+      <%= link_to "Cocktails", cocktails_path, class: "nav-link" %>
+      <%= link_to "Make a cocktail", new_cocktail_path, class: "nav-link" %>
+    </div>
       <%= yield %>
+      <div class="footer">
+    <div class="footer-links">
+      <a href="https://github.com/juagarca"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/juagarca/"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="footer-copyright">
+      This site is made by Juan Garcia with <i class="fas fa-heart"></i> at Le Wagon
+    </div>
+  </div>
   </body>
 </html>

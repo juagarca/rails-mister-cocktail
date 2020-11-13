@@ -1,10 +1,10 @@
 class CocktailsController < ApplicationController
   def home
-    @cocktails = Cocktail.all
+    @cocktails = sort_cocktails(Cocktail.all)
   end
 
   def index
-    @cocktails = Cocktail.all
+    @cocktails = sort_cocktails(Cocktail.all)
   end
 
   def show
@@ -29,5 +29,11 @@ class CocktailsController < ApplicationController
 
   def cocktail_params
     params.require(:cocktail).permit(:name, :photo)
+  end
+
+  def sort_cocktails(cocktails)
+    cocktails.sort_by do |c|
+      c.name
+    end
   end
 end

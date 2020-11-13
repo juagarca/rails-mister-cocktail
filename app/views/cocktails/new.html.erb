@@ -1,11 +1,11 @@
 <div class="container" style="width: 500px;">
   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('/assets/bar.jpg');"><h1>New cocktail</h1></div>
   <br>
-  <div class="container text-center" style="width: 350px;">
+  <div class="container" style="width: 350px;">
     <p>What's the name?</p>
     <%= simple_form_for(@cocktail) do |f| %>
       <%= f.input :name %>
-      <%= f.input :photo, as: :file %>
+      <%= f.input :photo, :label => "Do you have a photo?", as: :file %>
       <%= f.submit "Make", class: "button"%>
     <% end %>
   </div>
