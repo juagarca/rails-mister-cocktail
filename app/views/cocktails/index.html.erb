@@ -1,6 +1,7 @@
 <br><br>
 <div class="container">
-<h1>All cocktails (<%=  @cocktails.count %>)</h1>
+<h1>You've mastered <%=  @cocktails.count %> cocktails!</h1>
+  <br>
   <div class="cards-container" >
     <% @cocktails.each do |c| %>
       <% if c.photo.attached? %>

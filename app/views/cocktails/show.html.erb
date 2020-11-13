@@ -5,8 +5,9 @@
   <% end %>
   <br>
   <div class="container" style="width: 350px;">
-  <p>Ingredients and measurements:</p>
-
+    <% if @cocktail.doses.count != 0 %>
+      <p>Ingredients and measurements:</p>
+    <% end %>
     <% @cocktail.doses.each do |d| %>
       <p>- <%= d.description %> | <%= d.ingredient.name %> |
         <%= link_to 'ⓧ', dose_path(d.id),

@@ -1,8 +1,7 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('/assets/bar.jpg');">
   <div class="container">
-    <h1>London's finest online <strong>cocktail</strong> bar</h1>
-    <br>
-    <%= link_to 'Make a cocktail', new_cocktail_path, class: "button" %>
+    <h1>London's finest</h1>
+    <h1>online cocktail bar</h1>
   </div>
 </div>
 <br>
@@ -11,8 +10,8 @@
     <p>You have not made any cocktails yet, click below to make your first one!</p>
     <%= link_to 'Make a cocktail', new_cocktail_path, class: "button" %>
   <% else %>
-    <h1>All cocktails (<%=  @cocktails.count %>)</h1> <br>
-
+    <h1>You've mastered <%=  @cocktails.count %> cocktails!</h1>
+    <br>
     <div class="cards-container">
       <% @cocktails.each do |c| %>
         <% if c.photo.attached? %>
