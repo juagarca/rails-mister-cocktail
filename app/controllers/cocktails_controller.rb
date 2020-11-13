@@ -33,7 +33,7 @@ class CocktailsController < ApplicationController
 
   def sort_cocktails(cocktails)
     cocktails.sort_by do |c|
-      c.name
+      c.name.capitalize
     end
   end
 end
