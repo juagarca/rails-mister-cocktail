@@ -1,8 +1,11 @@
+<div class="container">
 <h1>All cocktails (<%=  @cocktails.count %>)</h1>
-<div class="cards-container">
-  <% @cocktails.each do |c| %>
-  <div class="card">
-    <%= link_to c.name, cocktail_path(c.id) %>
+  <div class="cards-container">
+    <% @cocktails.each do |c| %>
+    <div class="card">
+      <%= link_to c.name, cocktail_path(c.id) %>
+    </div>
+    <% end %>
   </div>
-  <% end %>
 </div>
+

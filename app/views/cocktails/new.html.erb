@@ -1,6 +1,10 @@
-<h1>Add a new cocktail</h1>
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">New cocktail</div>
+<br>
+<div class="container text-center" style="width: 350px;">
+  <p>What's the name?</p>
 
-<%= simple_form_for(@cocktail) do |f| %>
-  <%= f.input :name %>
-  <%= f.submit class: "button-white"%>
-<% end %>
+  <%= simple_form_for(@cocktail) do |f| %>
+    <%= f.input :name %>
+    <%= f.submit "Make", class: "button-white"%>
+  <% end %>
+</div>

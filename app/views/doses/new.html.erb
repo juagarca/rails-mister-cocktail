@@ -1,7 +1,12 @@
-<h1>Add a new dose for Cocktail <%= @cocktail.name %></h1>
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()"> <%= @cocktail.name %></div>
+<br>
+<div class="container text-center" style="width: 350px;">
+  <p>Add description and ingredient: </p>
+  <%=simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.input :description %>
+    <%= f.association :ingredient %>
+    <%= f.submit "Add", class: "button-white"%>
+  <% end %>
+</div>
 
-<%=simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.input :description %>
-  <%= f.association :ingredient %>
-  <%= f.submit class: "button-white"%>
-<% end %>
+

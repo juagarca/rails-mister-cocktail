@@ -1,15 +1,19 @@
-<h1>Cocktail <%= @cocktail.name %> </h1>
-<p>Ingredients and measurements:</p>
-<div class="ingredients">
-  <ul>
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()"> <%= @cocktail.name %></div>
+
+<div class="container text-center">
+  <br>
+  <p>Ingredients and measurements:</p>
+
     <% @cocktail.doses.each do |d| %>
-      <li><%= d.description %> | <%= d.ingredient.name %> |
+      <p>- <%= d.description %> | <%= d.ingredient.name %> |
         <%= link_to 'ⓧ', dose_path(d.id),
               method: :delete,
               data: { confirm: "Are you sure?" } %>
-      </li>
+      </p>
     <% end %>
-  </ul>
+
+  <br>
+  <%= link_to 'New dose', new_cocktail_dose_path(@cocktail.id), class: "button-white" %> <br> <br>
+  <%= link_to '🔙 to cocktails', cocktails_path, class: "button-white" %>
 </div>
 
-<%= link_to 'Create a new dose', new_cocktail_dose_path(@cocktail.id), class: "button-white" %>
